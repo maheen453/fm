@@ -7,16 +7,19 @@
     <link rel="stylesheet" type="text/css" href="/index.css" />
 </head>
 <body>
-    <div class="max-w-md mx-auto mt-10 p-6 bg-base-300 rounded-lg shadow-md">
-        <h1 class="text-2xl font-bold mb-4 text-center">Sign Up</h1>
+        <h1 class="text-2xl font-bold mb-4 text-center" style="margin-top: 50px;">Sign Up</h1>
 
-        <ul>
+        <ul style="list-style-type: none; padding: 5px; margin: 0; max-width: 28rem; margin-left: auto; margin-right: auto;">
             <% if (typeof errors != 'undefined') { %>
                 <% errors.forEach(error=> { %>
-                    <li> <%= error.message %> </li>
+                    <li style="background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; padding: 10px; border-radius: 5px; text-align: center;">
+                         <%= error.message %>
+                    </li>
                 <% }) %>
             <% } %>
         </ul>
+
+        <div class="max-w-md mx-auto mt-9 p-6 bg-base-300 rounded-lg shadow-md">
 
         <form action="/users/register" method="POST" class="space-y-4">
 
